@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:firstapp/page/signup.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Welcom extends StatelessWidget {
   const Welcom({super.key});
@@ -11,6 +13,7 @@ class Welcom extends StatelessWidget {
       backgroundColor: Color(0xFFFF9000),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               height: 20,
@@ -40,19 +43,23 @@ class Welcom extends StatelessWidget {
             SizedBox(
               height: 60,
             ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 252, 251, 249),
-                  borderRadius: BorderRadius.circular(33)),
-              width: 300,
-              height: 60,
-              child: Center(
-                child: Text(
-                  'Get Started',
-                  style: TextStyle(
-                      color: Color(0xFFFF9000),
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold),
+            GestureDetector(
+              onTap: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Signup())),
+              child: Container(
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 252, 251, 249),
+                    borderRadius: BorderRadius.circular(33)),
+                width: 300,
+                height: 60,
+                child: Center(
+                  child: Text(
+                    'Get Started',
+                    style: TextStyle(
+                        color: Color(0xFFFF9000),
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             )
