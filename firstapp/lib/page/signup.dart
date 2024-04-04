@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:firstapp/lclasse.dart/butsignup.dart';
+import 'package:firstapp/lclasse.dart/imgenscri.dart';
 import 'package:firstapp/lclasse.dart/textfield.dart';
 import 'package:firstapp/page/login.dart';
 import 'package:flutter/cupertino.dart';
@@ -37,12 +39,15 @@ class Signup extends StatelessWidget {
               ispasword: true,
               hinttext: "Password",
             ),
+            SizedBox(
+              height: 25,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "I already have an account",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal),
                 ),
                 SizedBox(
                   width: 10,
@@ -53,7 +58,7 @@ class Signup extends StatelessWidget {
                   child: Text(
                     "Log-in",
                     style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: Color.fromARGB(255, 252, 251, 249)),
                   ),
@@ -61,24 +66,34 @@ class Signup extends StatelessWidget {
               ],
             ),
             SizedBox(
+              height: 25,
+            ),
+            Buttonls(),
+            SizedBox(
+              height: 25,
+            ),
+            SizedBox(
               width: 277,
               child: Row(
                 children: [
                   Expanded(
                       child: Divider(
+                    color: Color.fromARGB(255, 252, 251, 249),
                     thickness: 2,
                   )),
-                  Text(
-                    "OR",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
+                  Text("OR",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 252, 251, 249),
+                      )),
                   Expanded(
                       child: Divider(
+                    color: Color.fromARGB(255, 252, 251, 249),
                     thickness: 2,
-                  ))
+                  )),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
