@@ -25,7 +25,7 @@ class Welcom extends StatelessWidget {
                   color: Color.fromARGB(255, 252, 251, 249),
                   fontWeight: FontWeight.bold),
             ),
-            Image.asset('borgir.png'),
+            Image.asset('assets/borgir.png'),
             Text(
               'Enjoy',
               style: TextStyle(
