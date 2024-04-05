@@ -7,24 +7,23 @@ class Insimg extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Row(
-        children: [
-          Image.asset(
-            'assets/facebook',
-            width: 15,
-            height: 20,
-          ),
-          SizedBox(
-            width: 30,
-          ),
-          Image.asset(
-            'assets/google',
-            width: 15,
-            height: 20,
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset(
+          'assets/facebook.png',
+          width: 50,
+          height: 60,
+        ),
+        SizedBox(
+          width: 30,
+        ),
+        Image.asset(
+          'assets/google.png',
+          width: 50,
+          height: 60,
+        ),
+      ],
     );
   }
 }
