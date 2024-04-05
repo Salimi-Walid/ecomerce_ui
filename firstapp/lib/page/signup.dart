@@ -17,6 +17,7 @@ class Signup extends StatelessWidget {
       backgroundColor: Color(0xFFFF9000),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "Sign Up",
@@ -94,6 +95,10 @@ class Signup extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Insimg(),
           ],
         ),
       ),
