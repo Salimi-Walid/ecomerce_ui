@@ -27,7 +27,9 @@ class Login extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Color.fromARGB(255, 252, 251, 249)),
             ),
-            Image.asset('assets/pizza.png'),
+            Image.asset(
+              'assets/pizza.png',
+            ),
             Textfield(
               TextInputType1: TextInputType.emailAddress,
               ispasword: false,
