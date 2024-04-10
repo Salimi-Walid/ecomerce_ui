@@ -1,67 +1,78 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:firstapp/clproduct/foodt.dart';
+import 'package:firstapp/clproduct/prodact.dart';
 import 'package:flutter/material.dart';
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
   @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
+  List foodmenu = [
+    Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
+    Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
+    Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png")
+  ];
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        title: Text('Menu'),
+        actions: [
+          CircleAvatar(
+            child: Image.asset(
+              'assets/borgir.png',
+            ),
+          )
+        ],
+      ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              Text(
-                "Mune",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-              ),
-              SizedBox(
-                width: 380,
-              ),
-              CircleAvatar(
-                child: Image.asset('assets/borgir.png'),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 20,
-          ),
           Container(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.all(25),
+            margin: EdgeInsets.symmetric(horizontal: 25),
             decoration: BoxDecoration(
                 color: Color(0xFFFF9000),
-                borderRadius: BorderRadius.circular(15)),
-            width: 470,
-            height: 95,
+                borderRadius: BorderRadius.circular(22)),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("data"),
-                SizedBox(
-                  width: 300,
+                Text(
+                  'data',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                      color: Color.fromARGB(255, 252, 251, 249)),
                 ),
                 Image.asset(
                   'assets/borgir.png',
-                  width: 100,
-                  height: 200,
-                ),
+                  height: 100,
+                )
               ],
             ),
           ),
           SizedBox(
-            height: 15,
+            height: 18,
+          ),
+          Expanded(
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: foodmenu.length,
+              itemBuilder: (context, index) => Foodt(
+                prodect: foodmenu[index],
+              ),
+            ),
           ),
           SizedBox(
-            width: double.infinity,
-            child: Text(
-              '    PIZZA 🍕',
-              textAlign: TextAlign.start,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          )
+            height: 25,
+          ),
+          Container()
         ],
       ),
     );

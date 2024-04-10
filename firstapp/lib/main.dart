@@ -1,6 +1,5 @@
+import 'package:firstapp/page/hompage.dart';
 import 'package:flutter/material.dart';
-
-import 'page/welcom.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Welcom(),
+      home: Homepage(),
     );
   }
 }
