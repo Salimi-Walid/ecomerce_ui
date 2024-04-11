@@ -12,39 +12,37 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  List foodmenu = [
-    Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
-    Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
-    Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png")
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text('Menu'),
+        title: Text(
+          '  Menu',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
         actions: [
           CircleAvatar(
             child: Image.asset(
               'assets/borgir.png',
             ),
-          )
+          ),
         ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.all(25),
+            padding: EdgeInsets.all(20),
             margin: EdgeInsets.symmetric(horizontal: 25),
             decoration: BoxDecoration(
-                color: Color(0xFFFF9000),
+                color: Color.fromARGB(255, 248, 151, 5),
                 borderRadius: BorderRadius.circular(22)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  'data',
+                  'the third for free',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
@@ -60,6 +58,13 @@ class _HomepageState extends State<Homepage> {
           SizedBox(
             height: 18,
           ),
+          Text(
+            '     Borgar 🍔 ',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 14,
+          ),
           Expanded(
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -70,9 +75,21 @@ class _HomepageState extends State<Homepage> {
             ),
           ),
           SizedBox(
-            height: 25,
+            height: 18,
           ),
-          Container()
+          Text(
+            '     Pizza 🍕',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          Expanded(
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: foodpiza.length,
+              itemBuilder: (context, index) => Foodt(
+                prodect: foodpiza[index],
+              ),
+            ),
+          ),
         ],
       ),
     );

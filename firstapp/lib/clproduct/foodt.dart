@@ -11,11 +11,11 @@ class Foodt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(25),
+      padding: const EdgeInsets.all(9),
       margin: const EdgeInsets.only(left: 25),
       decoration: BoxDecoration(
           // ignore: prefer_const_constructors
-          color: Color(0xFFFF9000),
+          color: Color.fromARGB(255, 230, 218, 203),
           borderRadius: BorderRadius.circular(20)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,7 +26,7 @@ class Foodt extends StatelessWidget {
           ),
           Text(
             prodect.name,
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           SizedBox(
             width: 160,
@@ -35,8 +35,12 @@ class Foodt extends StatelessWidget {
               children: [
                 Text(
                   '\$' + prodect.prix,
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-                Icon(Icons.add)
+                Icon(
+                  Icons.add_circle,
+                  color: Color.fromARGB(255, 80, 202, 56),
+                )
               ],
             ),
           )

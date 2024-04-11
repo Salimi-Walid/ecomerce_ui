@@ -7,3 +7,15 @@ class Prodect {
   String get _pix => prix;
   String get _imagepath => imagepath;
 }
+
+List foodmenu = [
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png")
+];
+List foodpiza = [
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png")
+];
