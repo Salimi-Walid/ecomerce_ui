@@ -26,7 +26,7 @@ class Foodt extends StatelessWidget {
           ),
           Text(
             prodect.name,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
           SizedBox(
             width: 160,

@@ -10,12 +10,12 @@ class Prodect {
 
 List foodmenu = [
   Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
-  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
-  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png")
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgira/bor1.png"),
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgira/bor1.png")
 ];
 List foodpiza = [
-  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
-  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
-  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png"),
-  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/borgir.png")
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/pizzaa/piz1.png"),
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/pizzaa/piz2.png"),
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/pizzaa/piz3.png"),
+  Prodect(name: "pizza", prix: "22.00", imagepath: "assets/pizza.png")
 ];
