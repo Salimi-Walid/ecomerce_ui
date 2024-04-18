@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:firstapp/clproduct/fooddt.dart';
+import 'package:firstapp/page/fooddt.dart';
 import 'package:firstapp/clproduct/foodt.dart';
 import 'package:firstapp/clproduct/prodact.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +19,15 @@ class _HomepageState extends State<Homepage> {
         MaterialPageRoute(
             builder: (context) => FoodDetail(
                   prodect: foodmenu[index],
+                )));
+  }
+
+  void navigateFoodDEtailPizza(int index) {
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => FoodDetail(
+                  prodect: foodpiza[index],
                 )));
   }
 
@@ -95,7 +104,7 @@ class _HomepageState extends State<Homepage> {
               itemCount: foodpiza.length,
               itemBuilder: (context, index) => Foodt(
                 prodect: foodpiza[index],
-                onTap: () => navigateFoodDetaile(index),
+                onTap: () => navigateFoodDEtailPizza(index),
               ),
             ),
           ),
