@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:firstapp/clproduct/fooddt.dart';
 import 'package:firstapp/clproduct/foodt.dart';
 import 'package:firstapp/clproduct/prodact.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,15 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  void navigateFoodDetaile(int index) {
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => FoodDetail(
+                  prodect: foodmenu[index],
+                )));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,12 +31,9 @@ class _HomepageState extends State<Homepage> {
           '  Menu',
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
+        leading: CircleAvatar(child: Icon(Icons.person)),
         actions: [
-          CircleAvatar(
-            child: Image.asset(
-              'assets/borgir.png',
-            ),
-          ),
+          IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
         ],
       ),
       body: Column(
@@ -71,6 +78,7 @@ class _HomepageState extends State<Homepage> {
               itemCount: foodmenu.length,
               itemBuilder: (context, index) => Foodt(
                 prodect: foodmenu[index],
+                onTap: () => navigateFoodDetaile(index),
               ),
             ),
           ),
@@ -87,9 +95,13 @@ class _HomepageState extends State<Homepage> {
               itemCount: foodpiza.length,
               itemBuilder: (context, index) => Foodt(
                 prodect: foodpiza[index],
+                onTap: () => navigateFoodDetaile(index),
               ),
             ),
           ),
+          SizedBox(
+            height: 15,
+          )
         ],
       ),
     );
