@@ -4,6 +4,7 @@ import 'package:firstapp/page/fooddt.dart';
 import 'package:firstapp/clproduct/foodt.dart';
 import 'package:firstapp/clproduct/prodact.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -37,12 +38,30 @@ class _HomepageState extends State<Homepage> {
       appBar: AppBar(
         elevation: 0,
         title: Text(
-          '  Menu',
+          'Menu',
           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
         ),
-        leading: CircleAvatar(child: Icon(Icons.person)),
+        leading: Container(
+            padding: EdgeInsets.all(7),
+            margin: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(60),
+              color: Color.fromARGB(255, 236, 184, 105),
+            ),
+            child: Icon(Icons.person)),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Stack(children: [
+              Container(
+                decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 230, 218, 203),
+                    shape: BoxShape.circle),
+                child: Text('0'),
+              ),
+              IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart))
+            ]),
+          ),
         ],
       ),
       body: Column(
