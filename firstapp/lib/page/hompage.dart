@@ -1,10 +1,12 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:firstapp/clproduct/shop.dart';
 import 'package:firstapp/page/fooddt.dart';
 import 'package:firstapp/clproduct/foodt.dart';
 import 'package:firstapp/clproduct/prodact.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -15,6 +17,8 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   void navigateFoodDetaile(int index) {
+    final shop = context.read<Shop>();
+    final foodmenu = shop.foodmenu;
     Navigator.push(
         context,
         MaterialPageRoute(
@@ -34,6 +38,8 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
+    final shop = context.read<Shop>();
+    final foodmenu = shop.foodmenu;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,

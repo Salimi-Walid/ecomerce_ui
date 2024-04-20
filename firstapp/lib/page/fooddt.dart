@@ -1,6 +1,9 @@
 import 'package:firstapp/clproduct/prodact.dart';
+import 'package:firstapp/clproduct/shop.dart';
+import 'package:firstapp/lclasse.dart/buttonadd.dart';
 import 'package:firstapp/lclasse.dart/containepd.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 //class dyal detail produi
 class FoodDetail extends StatefulWidget {
@@ -12,6 +15,18 @@ class FoodDetail extends StatefulWidget {
 }
 
 class _FoodDetailState extends State<FoodDetail> {
+  void addTocart() {
+    final shop = context.read()<Shop>();
+    shop.addTocart(
+      widget.prodect,
+    );
+    showDialog(
+        context: context,
+        builder: (context) => const AlertDialog(
+              content: Text('secssecfel add'),
+            ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,7 +91,9 @@ class _FoodDetailState extends State<FoodDetail> {
               const SizedBox(
                 height: 40,
               ),
-              const Buttonadd()
+              Buttonadd(
+                onTap: addTocart,
+              )
             ],
           ))
         ],
